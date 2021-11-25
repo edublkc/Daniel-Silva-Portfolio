@@ -27,6 +27,11 @@ goToTop.addEventListener('click',function(){
         left:0,
         behavior: "smooth"
     });
+
+    removeAllActiveMenuClass()
+    if(!menuOptions[0].classList.contains('active')){
+        menuOptions[0].classList.add('active')
+    }
 })
 
 
