@@ -4,6 +4,7 @@ const menu = document.querySelector('#navbar')
 const goToTop = document.querySelector('.go-to-top')
 const menuOptions = document.querySelectorAll('#menu-items a')
 const animationsElements = document.querySelectorAll('[data-anime]')
+const allSectionsContent = document.querySelectorAll('section')
 
 menuMobileIcon.addEventListener('click',function(){
     menuMobile.classList.toggle('active')
@@ -21,6 +22,15 @@ function animateElements(){
     })
 }
 
+function changeMenuOptions(){
+    const windowTop = window.pageYOffset + window.innerHeight / 4
+    allSectionsContent.forEach((section,index) =>{
+        if(windowTop > section.offsetTop){
+            removeAllActiveMenuClass()
+            menuOptions[index].classList.add('active')
+        }
+    })
+}
 
 window.addEventListener('scroll',function(){
 
@@ -33,6 +43,7 @@ window.addEventListener('scroll',function(){
     }
 
     animateElements()
+    changeMenuOptions()
 })
 
 
