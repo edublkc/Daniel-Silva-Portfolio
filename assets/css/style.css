@@ -411,3 +411,33 @@ footer a{
         font-size: 10px;
     }
 }
+
+[data-anime]{
+    opacity: 0;
+    transition: 0.3s;
+}
+
+[data-anime="left"]{
+    transform:translate3d(-50px,0,0);
+}
+
+[data-anime="right"]{
+    transform:translate3d(50px,0,0);
+}
+
+[data-anime="top"]{
+    transform:translate3d(0,-50px,0);
+}
+
+[data-anime="center"]{
+    transform:scale(0.5);
+}
+
+[data-anime].animate{
+    opacity: 1;
+    transform:translate3d(0,0,0);
+}
+
+[data-anime="center"].animate{
+    transform:scale(1);
+}
