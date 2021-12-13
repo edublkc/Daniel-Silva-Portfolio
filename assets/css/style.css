@@ -399,6 +399,14 @@ footer a{
     color: #18d26e;
 }
 
+.lang{
+    transition: 0.3s;
+    cursor: pointer;
+}
+.lang:hover{
+    transform: scale(0.8);
+} 
+
 /*Mobile section*/
 @media (max-width: 900px) {
     .wrap {
